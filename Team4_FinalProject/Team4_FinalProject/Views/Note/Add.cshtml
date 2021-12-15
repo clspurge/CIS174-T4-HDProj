@@ -15,10 +15,10 @@
     </div>
 
     <input type="hidden" asp-for="NoteId" />
-    <input type="hidden" asp-for="TicketId" value="@Model.TicketId"/>
+    <input type="hidden" asp-for="TicketId"/>
 
     <button type="submit" class="btn btn-primary">Add</button>
-    <button action="Details" controller="Ticket" class="btn btn-primary" asp-route-id="@Model.TicketId">Cancel</button>
+    <a asp-action="Details" asp-controller="Ticket" class="btn btn-primary" asp-route-id="@Model.TicketId">Cancel</a>
 </form>
 
 <!--<form asp-action="Add" method="post">

@@ -11,7 +11,7 @@ namespace Team4_FinalProject.Models
         [Key]
         public int TicketId { get; set; }
 
-        [Required]
+        [Required (ErrorMessage="Must specify an Issue")]
         public string Issue { get; set; }
 
         public DateTime DateOpened { get; set; }

@@ -43,6 +43,7 @@ namespace Team4_FinalProject.Controllers
             }
             else
             {
+                ViewBag.User = context.Users.Find(ticket.UserId);
                 ModelState.AddModelError("Invalid", "Model State was invalid what did you do?");
                 return View(ticket);
             }
