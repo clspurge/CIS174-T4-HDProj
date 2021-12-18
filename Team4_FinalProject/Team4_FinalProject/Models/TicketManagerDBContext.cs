@@ -21,6 +21,8 @@ namespace Team4_FinalProject.Models
             modelBuilder.Entity<User>().Property(p => p.IsTechnician).HasDefaultValue(false);
             modelBuilder.Entity<Ticket>().Property(t => t.DateOpened).HasDefaultValueSql("GETDATE()");
             modelBuilder.Entity<Note>().Property(t => t.DateCreated).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Ticket>().Property(t => t.Status).HasDefaultValue("In Progress");
+
 
             //Seed Users
             User user1 = new();

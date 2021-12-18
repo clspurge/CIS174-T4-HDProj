@@ -56,5 +56,11 @@ namespace Team4_FinalProject.Controllers
             }
            
         }
+
+        public IActionResult Logout(LoginViewModel model)
+        {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Index", "Home");
+        }
     }
 }

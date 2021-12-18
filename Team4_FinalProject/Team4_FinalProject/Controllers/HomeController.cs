@@ -18,6 +18,7 @@ namespace Team4_FinalProject.Controllers
         {
             context = ctx;
         }
+
         public IActionResult Index()
         {
             var user_id = HttpContext.Session.GetInt32("user_id");
@@ -28,6 +29,7 @@ namespace Team4_FinalProject.Controllers
             else
             {
                 List<Ticket> user_tickets;
+                TempData["userId"] = user_id;
                 var user = context.Users.Single(u => u.UserId == user_id);
                 //Can't find a way to lazy load tickets with a single user query only all users so
                 //tickets had to be retrieves separate
