@@ -27,6 +27,16 @@
             </select>
         </div>
     }
+    else
+    {
+        <div class="form-group">
+            <label asp-for="Status">Status</label>
+            <select asp-for="Status" class="form-control">
+                <option value="In Progress">In Progress</option>
+            </select>
+        </div>
+    }
+
     <input type="hidden" asp-for="TicketId" />
     <input type="hidden" asp-for="UserId" />
 
