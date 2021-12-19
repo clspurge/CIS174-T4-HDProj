@@ -26,8 +26,6 @@ namespace Team4_FinalProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                //n.TicketId = ticketId;
-                //ViewBag.TicketId = ticketId;
                 if (n.NoteId == 0)
                 {
                     context.Notes.Add(n);
@@ -45,30 +43,5 @@ namespace Team4_FinalProject.Controllers
                 return View(n);
             }
         }
-        //[HttpGet]
-        //public IActionResult Add()
-        //{
-        //    Note n = new Note();
-        //    return View(n);
-        //}
-
-        //    [HttpPost]
-        //public IActionResult Add(int id)
-        //{
-
-        //    n.DateCreated = DateTime.Now;
-        //    n.TicketId = id;
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (n.NoteId == 0)
-        //            context.Notes.Add(n);
-        //        context.SaveChanges();
-        //        return RedirectToAction("Detail", "Ticket");
-        //    }
-        //    else
-        //    {
-        //        //return RedirectToAction("Detail", "Ticket");
-        //        return View(n);
-        //    }
     }
 }

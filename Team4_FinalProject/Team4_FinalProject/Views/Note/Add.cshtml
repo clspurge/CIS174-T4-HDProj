@@ -20,19 +20,3 @@
     <button type="submit" class="btn btn-primary">Add</button>
     <a asp-action="Details" asp-controller="Ticket" class="btn btn-primary" asp-route-id="@Model.TicketId">Cancel</a>
 </form>
-
-<!--<form asp-action="Add" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Content">Note Detail</label>
-        <input asp-for="Content" class="form-control" />
-    </div>
-
-    <input type="hidden" asp-for="NoteId" />
-    <input type="hidden" asp-for="TicketId"/>
-
-</form>-->
-
-@*<button type="submit">Add</button>*@
-@*<my-link-button action="Index" controller="Ticket">Cancel</my-link-button>*@
-@*<button action="Details" controller="Ticket">Cancel</button>*@

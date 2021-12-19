@@ -19,14 +19,12 @@
 <a asp-controller="Home" asp-action="Index" class="btn btn-primary" asp-route-id="@ViewBag.User">Return to Ticket List</a>
 
 <h3 class="m-2 text-primary">Notes: </h3>
-@*<a class="btn btn-primary mb-2" asp-controller="Note" asp-action="Add" asp-route-id="@ViewBag.Ticket.TicketId">Add Note</a>*@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Note Id</th>
             <th>Content</th>
             <th>Date Opened</th>
-            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -38,9 +36,6 @@
                     <div style="word-wrap: break-word">@note.Content</div>
                 </td>
                 <td>@note.DateCreated</td>
-                @*<td>
-                        <a asp-controller="Note" asp-route-id="@note.NoteId" asp-action="Details">View Details</a>
-                    </td>*@
             </tr>
         }
     </tbody>
